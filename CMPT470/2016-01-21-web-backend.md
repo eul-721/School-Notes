@@ -1,5 +1,4 @@
 # Web Side Architecture
----
 ## Character Sets/Encoding
 - **character set**: a list of characters and character mappings
     - `ASCII` is universal: 95 characters, English only, but fits in 7 bits
@@ -12,6 +11,7 @@
 - always explicitly declare encoding
     - `<meta charset=“utf-8” />`
 - never guess character encoding
+
 ---
 ## Redirects
 
@@ -22,6 +22,7 @@
     - in your code: you can return response with 301 status. Good for specific cases that need logic/DB info to detect.
 - general principle: URLs should never become invalid
     - when planning, taking some time to come up with a good URL schema
+
 ---
 ## HTTP Caching
 
@@ -50,6 +51,7 @@
   - for dynamic sites, remember that CSS+JS+images are static & infrequently change.
   - Use URLs consistently, minimize `POST`
   - set reasonable expires headers
+
 ---
 ## Content Negotiation
 
