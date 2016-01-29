@@ -99,3 +99,40 @@
 * NoSQL DBs also have simpler data models
   * e.g. key/value store
   * e.g. document store: each row is like a JSON object of key/value pairs
+* ACID rules can be relaxed.
+  * e.g. eventual consistency: multiple servers may have different data temporarily, but will sync soon.
+  * e.g. restrict what is a **transaction**.
+* many different techs described as **NoSQL**
+  * different tradeoffs of various DB properties
+  * goal is generally speed/scalability
+  * maybe need multiple DB techs for your system.
+* but...
+  * modern relational databases are very fast and can hold huge amounts of databases
+  * why make life more complicated if Postgres will do the job?
+  * some NoSQL databases are *immature*.
+* suggestions
+  * think of NoSQL as an optimization
+  * using as a cache can be very effective (memcached, Redis)
+
+## Summary
+
+* there's more to data storage than relational + ACID.
+* some data is better suited to other tools
+
+# Model View Controller (MVC)
+
+> Model/View/Controller architecture
+
+* **Model**: the data layer
+  * holds the info & the logic to manipulate it.
+  * usually classes/objects for the data you've got.
+  * often combined with an ORM
+  * good OO and/or relational DB design should take care of it
+* **View**: display
+  * arranges data for the user to see
+  * *for the web*: usually HTML templates.
+  * **should contain no (significant) logic** -- that goes in M/C
+* **Controller**: responds to events (user actions)
+  * HTTP requests for web
+  * uses the model to get the data, and view to present to user
+* many web frameworks use MVC (terms may vary)
