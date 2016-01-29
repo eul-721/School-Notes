@@ -81,4 +81,21 @@
    book = (something)
   book.person.fname == "John"
    ```
-  
+
+# NoSQL
+
+> a general term for modern non-relational databases.
+  * doesn't describe a technology, or even specific type
+
+*Motivation*: very high volume sites with huge data stores.
+* Then the relational/SQL/ACID paradigm is **slow**.
+* Hard to be consistent across many servers
+* joins can be expensive with lots of data.
+* ACID guarantees can be unnecessary.
+  * maybe we don't care about occasional missed transactions
+  * bank: definitely do care
+  * up/downvotes on comments: whatever
+  * post not globally-visible for
+* NoSQL DBs also have simpler data models
+  * e.g. key/value store
+  * e.g. document store: each row is like a JSON object of key/value pairs
